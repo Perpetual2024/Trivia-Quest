@@ -1,5 +1,21 @@
 body {
-    background-color:
+    background-color: pink;
 }
+
+.quiz-div{
+    background-color: orange;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+button {
+
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+
 
     
