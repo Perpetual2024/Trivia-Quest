@@ -14,8 +14,23 @@ button {
     background-color: transparent;
     text-decoration: none;
 }
+header{
+    background-color: rgb(163, 153, 134);
+    padding: 0px;
 
-
+}
+#menu {
+    padding: 0px;
+}
+.menu-container { 
+list-style: none;
+padding: 10px;
+}
+.menu-container li {
+    text-align: right;
+    padding: 10px;
+    display: inline;
+}
 
 
     
