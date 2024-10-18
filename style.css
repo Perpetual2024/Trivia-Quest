@@ -1,9 +1,9 @@
 body {
-    background-color: pink;
+    background: url(https://media.istockphoto.com/id/1469754711/vector/trivia-time-neon-sign-geometric-frame-decoration-quiz-show-label-on-brick-wall-vector-stock.jpg?s=1024x1024&w=is&k=20&c=Gvbi7fpJMGjCl4JZf0xl-8nlWRc-w1k3moOgaoUsm3g=);
 }
 
 .quiz-div{
-    background-color: rgb(163, 153, 134);
+    background-color: green;
     padding: 20px;
     border: 1px solid black;
     text-align: center;
@@ -15,8 +15,9 @@ button {
     text-decoration: none;
 }
 header{
-    background-color: rgb(163, 153, 134);
+    background-color: yellow;
     padding: 0px;
+    
 
 }
 #menu {
@@ -30,6 +31,18 @@ padding: 10px;
     text-align: right;
     padding: 10px;
     display: inline;
+    
+}
+.span{
+    font-style: italic;
+    font-size: 20px;
+    color: purple;
+}
+h2{
+    color: beige;
+}
+p{
+    color: yellow;
 }
 
 
