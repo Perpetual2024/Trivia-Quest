@@ -1,13 +1,12 @@
-
-const baseUrl = 'http://localhost:3000/results'
-document.addEventListener('DOMContentLoaded',()=>{
+const baseUrl= "http://localhost:3000/results"
+document.getElementById('start').addEventListener('click',() =>{
     fetch(baseUrl)
     .then(response => response.json())
     .then(results =>{
         results.forEach(quiz =>{
             displayQuiz(quiz)
         })
-        
+    
 
     })
     . catch(error => console.log(error));
@@ -47,11 +46,12 @@ const form=  document.querySelector(`#quiz-form-${quiz.id}`);
             
         }else {
             result.textContent = `Incorrect!The correct answer is: ${quiz.correct_answer}`;
-            result.style.color = 'red'
+            result.style.color = 'pink'
         }
 form.reset()
     })
 }
+
 
 
 

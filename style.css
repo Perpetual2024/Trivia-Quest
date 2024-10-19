@@ -1,9 +1,9 @@
 body {
-    background: url(https://media.istockphoto.com/id/1469754711/vector/trivia-time-neon-sign-geometric-frame-decoration-quiz-show-label-on-brick-wall-vector-stock.jpg?s=1024x1024&w=is&k=20&c=Gvbi7fpJMGjCl4JZf0xl-8nlWRc-w1k3moOgaoUsm3g=);
+    background: url('https://www.signupgenius.com/cms/images/groups/100-Random-Trivia-Questions-1260x630.png');
 }
 
 .quiz-div{
-    background-color: green;
+    background-color: white;
     padding: 20px;
     border: 1px solid black;
     text-align: center;
@@ -11,7 +11,7 @@ body {
 }
 button {
 
-    background-color: transparent;
+    background-color: palevioletred;
     text-decoration: none;
 }
 header{
@@ -39,10 +39,10 @@ padding: 10px;
     color: purple;
 }
 h2{
-    color: beige;
+    color: ;
 }
 p{
-    color: yellow;
+    color: black;
 }
 
 
