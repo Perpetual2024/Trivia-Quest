@@ -9,7 +9,7 @@ This project is a simple web-based quiz application that allows users to select 
 - Provides multiple-choice questions with feedback on the answers.
 - Displays correct and incorrect answers.
 - Keeps track of the score.
-  
+ 
 ## Technologies Used
 
 - **HTML**: Structure of the web application.
