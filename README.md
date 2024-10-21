@@ -20,17 +20,10 @@ This project is a simple web-based quiz application that allows users to select 
 ### Example of a Sample Quiz Data Format
 
 The application expects quiz data to be returned in the following format:
-
-```json
-[
-    {
-        "id": 1,
-        "category": "Science",
-        "type": "multiple",
-        "difficulty": "easy",
-        "question": "What is the chemical symbol for water?",
-        "correct_answer": "H2O",
-        "incorrect_answers": ["O2", "CO2", "N2"]
-    },
-    ...
-]
+## Setup
+To run the applicatipon you have to press the Quiz up! button
+### Usage
+ Fill in the answers in the input bar.You will automatically  get the correct answer and the common incorrect answers.
+ ### API Documentation
+ This  application uses a local server to fetch quiz data. The server is running on `http://localhost:
+ 3000/results`. The API endpoint returns a JSON array of quiz questions.
