@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, make_response
 from flask_sqlalchemy import SQLAlchemy 
 from flask_migrate import Migrate
 from models import db, Profile
@@ -26,9 +26,10 @@ def get_profile(id):
     }
 
     if profile:
-     return jsonify(profile_obj), 200
+      response = make_response(profile_obj, 202)
+      return response
     
-    return jsonify({'message': 'Profile not found'}), 404
+    return 'Profile not identified', 404
 
 
 
