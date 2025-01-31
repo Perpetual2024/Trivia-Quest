@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function ProjectForm({ handleAddProject }) {
+function ProjectForm({ handleAddProject , projectToEdit}) {
   const [projectName, setProjectName] = useState({
     title: "",
     description: "",
     image: "",
     user_id: 0,
   });
+
+  useEffect(()=> {
+    if (projectToEdit) {
+      setProjectName(projectToEdit);
+    }
+  }, [projectToEdit]);
 
   const handleProjectChange = (event) => {
     setProjectName({ ...projectName, [event.target.name]: event.target.value });
@@ -16,7 +22,12 @@ function ProjectForm({ handleAddProject }) {
     event.preventDefault();
     const newProject = { ...projectName };
 
-    fetch("http://127.0.0.1:5555/project", {
+    const method = projectToEdit ? "PUT" : "POST";
+    const url = projectToEdit
+    ? `http://127.0.0.1:5555/project/${projectToEdit.id}`
+    : "http://127.0.0.1:5555/project";
+
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +41,7 @@ function ProjectForm({ handleAddProject }) {
 
   return (
     <div>
-      <h2>New Project</h2>
+      <h2>{projectToEdit ? "Edit Project" : "Add Project"}</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -61,7 +72,7 @@ function ProjectForm({ handleAddProject }) {
           value={projectName.user_id}
           onChange={handleProjectChange}
         />
-        <button type="submit">Add Project</button>
+        <button type="submit">{projectToEdit ? "Update Project" : "Add Project"}</button>
       </form>
     </div>
   );
