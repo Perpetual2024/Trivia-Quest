@@ -24,8 +24,8 @@ function ProjectForm({ handleAddProject , projectToEdit}) {
 
     const method = projectToEdit ? "PUT" : "POST";
     const url = projectToEdit
-    ? `http://127.0.0.1:5555/project/${projectToEdit.id}`
-    : "http://127.0.0.1:5555/project";
+    ? `http://127.0.0.1:5555/projects/${projectToEdit.id}`
+    : "http://127.0.0.1:5555/projects";
 
     fetch(url, {
       method: "POST",

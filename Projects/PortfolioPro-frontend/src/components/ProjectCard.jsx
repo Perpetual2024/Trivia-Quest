@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProjectCard({ project, handleDeleteProject, handleEditProject }) {
   const handleDelete = () => {
-    fetch(`http://127.0.0.1:5555/project/${project.id}`, {
+    fetch(`http://127.0.0.1:5555/projects/${project.id}`, {
       method: "DELETE",
     })
       .then((response) => response.json())

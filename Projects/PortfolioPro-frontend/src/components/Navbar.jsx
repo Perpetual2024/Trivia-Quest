@@ -19,7 +19,9 @@ function Navbar(){
             <li>
               <Link to="/about">About</Link>
             </li>
-            
+            <li>
+              <Link to="/comments">Comments</Link>
+            </li>
             
           </ul>
         </div>
