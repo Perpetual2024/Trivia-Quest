@@ -23,6 +23,7 @@ const SignupForm = () => {
       {({ isSubmitting }) => (
         <Form className="flex flex-col gap-4 p-4 border border-gray-300 rounded-md shadow-md w-1/3 mx-auto">
           <div>
+            <h2>Sign Up</h2>
             <label htmlFor="username">Username</label>
             <Field type="text" name="username" className="border p-2 w-full" />
             <ErrorMessage name="username" component="div" className="text-red-500" />

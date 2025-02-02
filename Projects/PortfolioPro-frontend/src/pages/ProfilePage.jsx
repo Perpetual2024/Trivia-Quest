@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const ProfilePage = ({ user, projects }) => {
   return (
     <div className="profile-page">

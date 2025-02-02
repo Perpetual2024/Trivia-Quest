@@ -17,12 +17,12 @@ function ProjectList() {
   }, []);
 
   const handleDeleteProject = (projectId) => {
-    setProjects(projects.filter(project => project.id !== projectId)); // Remove project from state
+    setProjects(projects.filter(project => project.id !== projectId));
   };
 
   const handleEditProject = (project) => {
-    console.log("Editing project:", project);  // Log to check if the function is triggered
-    setProjectToEdit(project); // Set project for editing
+    console.log("Editing project:", project);  
+    setProjectToEdit(project); 
     setUpdatedProject({
       title: project.title,
       description: project.description,
@@ -64,82 +64,93 @@ function ProjectList() {
   console.log(projectToEdit);  // Log the state to see if it's getting updated correctly
 
   return (
-    <div>
-      <h2>Project List</h2>
-      <div className="project-list">
-        {projects
-        .filter(project => project.id)
-        .map((project) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            handleDeleteProject={handleDeleteProject}
-            handleEditProject={handleEditProject}
-          />
-        ))}
-      </div>
+    <div className="project-container">
+     <h2 className="project-list-title">Project List</h2>
+  <div className="project-list">
+    {projects
+      .filter((project) => project.id)
+      .map((project) => (
+        <ProjectCard
+          key={project.id}
+          project={project}
+          handleDeleteProject={handleDeleteProject}
+          handleEditProject={handleEditProject}
+        />
+      ))}
+  </div>
 
-      {projectToEdit && (
-        <div className="edit-form" style={{display: 'block', padding: '20px', border: '1px solid #000'}}>
-          <h3>Edit Project</h3>
-          <form onSubmit={handleSubmitEdit}>
-          <div>
-              <label htmlFor="id">Id</label>
-              <input
-                type="integer"
-                name="id"
-                id="id"
-                value={updatedProject.id}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="title">Title</label>
-              <input
-                type="text"
-                name="title"
-                id="title"
-                value={updatedProject.title}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="description">Description</label>
-              <textarea
-                name="description"
-                id="description"
-                value={updatedProject.description}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="image">Image</label>
-              <textarea
-                name="image"
-                id="image"
-                value={updatedProject.image}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label htmlFor="user_id">User_id</label>
-              <input
-                type="integer"
-                name="user_id"
-                id="user_id"
-                value={updatedProject.user_id}
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit">Save Changes</button>
-            <button type="button" onClick={() => setProjectToEdit(null)}>
-              Cancel
-            </button>
-          </form>
+  {projectToEdit && (
+    <div className="edit-form">
+      <h3 className="edit-form-title">Edit Project</h3>
+      <form onSubmit={handleSubmitEdit} className="edit-form-content">
+        <div className="form-group">
+          <label htmlFor="id" className="form-label">ID</label>
+          <input
+            type="number"
+            name="id"
+            id="id"
+            value={updatedProject.id}
+            onChange={handleChange}
+            className="form-input"
+          />
         </div>
-      )}
+        <div className="form-group">
+          <label htmlFor="title" className="form-label">Title</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            value={updatedProject.title}
+            onChange={handleChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="description" className="form-label">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            value={updatedProject.description}
+            onChange={handleChange}
+            className="form-textarea"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="image" className="form-label">Image URL</label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            value={updatedProject.image}
+            onChange={handleChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="user_id" className="form-label">User ID</label>
+          <input
+            type="number"
+            name="user_id"
+            id="user_id"
+            value={updatedProject.user_id}
+            onChange={handleChange}
+            className="form-input"
+          />
+        </div>
+        <div className="form-actions">
+          <button type="submit" className="save-button">Save Changes</button>
+          <button
+            type="button"
+            onClick={() => setProjectToEdit(null)}
+            className="cancel-button"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
     </div>
-  );
-}
+  )}
+</div>
+)}
 
 export default ProjectList;

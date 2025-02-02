@@ -17,13 +17,18 @@ function Navbar(){
               <Link to="/projects">ProjectPage</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/comments">Comments</Link>
+              <Link to="/skills">SkillList</Link>
             </li>
             
           </ul>
+          <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="search-input"
+          />
+          <button className="search-button">Search</button>
+        </div>
         </div>
   
         

@@ -1,20 +1,27 @@
 import React from 'react'
 import ProjectForm from '../components/ProjectForm'
-import ProjectList from '../components/ProjectList';
+import ProjectSkillForm from '../components/ProjectSkill'; 
+import Comments from '../components/Comment'
+import BookmarkForm from '../components/Bookmark';
     function ProjectPage() {
         const handleAddProject = (project) => {
-          // handle the added project (e.g., update state or display confirmation)
-          console.log("Project added:", project);
+          
+          alert("Project added:", project);
         };
       
         return (
           <div>
             <h1>Project Page</h1>
             <ProjectForm handleAddProject={handleAddProject} />
-          
-          
-              <h2>Project List</h2>
-                 <ProjectList />
+        
+
+                 <h3>Project Skills</h3>
+                 <ProjectSkillForm />
+
+                 
+                 <Comments />
+
+                 <BookmarkForm />
           </div>
         );
       }

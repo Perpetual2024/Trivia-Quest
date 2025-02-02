@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { fetchProject } from '../data/api'
-import SignupForm from './SignUp'
+import ProjectList from '../components/ProjectList'
+import { Link } from 'react-router-dom'
 
 function HomePage() {
   const [projects, setProjects] = useState([])
@@ -12,9 +13,11 @@ function HomePage() {
     <div>
 
       <h1>Showcase Your Work with PortfolioPro</h1>
-      <p>Create, manage, and share your projects effortlessly</p>
+      <p>Ready to take your portfolio to the next level? Join PortfolioPro today and start building your online presence. Whether you're showcasing your latest project or exploring the work of others, PortfolioPro is here to help you shine</p>
       <div>
-        < SignupForm/>
+        < ProjectList/>
+        <li>
+        </li>
       </div>
 
     

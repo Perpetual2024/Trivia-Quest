@@ -15,14 +15,18 @@ function ProjectCard({ project, handleDeleteProject, handleEditProject }) {
   };
 
   return (
+  <div className='project-card-container'>  
     <div className="project-card">
-      <h2>{project.title}</h2>
-      <p>{project.description}</p>
-      <img src={project.image} alt={project.title} />
-      <p><strong>User ID:</strong> {project.user_id}</p>
-      <button onClick={handleEdit}>Edit Project</button>
-      <button onClick={handleDelete}>Delete Project</button>
-    </div>
+       <h2 className="project-title">{project.title}</h2>
+       <p className="project-description">{project.description}</p>
+       <img src={project.image} alt={project.title} className="project-image" />
+       <p className="project-user-id"><strong>User ID:</strong> {project.user_id}</p>
+    <div className="project-actions">
+       <button className="edit-button" onClick={handleEdit}>Edit Project</button>
+       <button className="delete-button" onClick={handleDelete}>Delete Project</button>
+  </div>
+</div>
+</div>
   );
 }
 
